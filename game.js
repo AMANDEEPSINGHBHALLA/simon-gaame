@@ -16,6 +16,16 @@ $(document).keypress(function() {
     }
 })
 
+document.addEventListener("touchstart", function() {
+      if (x == 0) {
+        $("#level-title").text("Level " + level);
+        $(".score").removeClass("score-hide");
+        $(".score").text("Score 0");
+        nextSequence();
+        x++;
+      }
+})
+
 $(".btn").click(function() {
 
     var userChosenColour = $(this).attr("id");
