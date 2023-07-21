@@ -17,6 +17,7 @@ $(document).keypress(function() {
 })
 
 document.addEventListener("touchstart", function() {
+    window.navigator.vibrate(300);
       if (x == 0) {
         $("#level-title").text("Level " + level);
         $(".score").removeClass("score-hide");
