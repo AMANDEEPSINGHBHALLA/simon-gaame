@@ -17,8 +17,8 @@ $(document).keypress(function() {
 })
 
 document.addEventListener("touchstart", function() {
-    window.navigator.vibrate(300);
       if (x == 0) {
+        window.navigator.vibrate(300);
         $("#level-title").text("Level " + level);
         $(".score").removeClass("score-hide");
         $(".score").text("Score 0");
@@ -86,6 +86,7 @@ function checkAnswer(currentLevel) {
         }
     }
     else {
+            window.navigator.vibrate(500);
         var audio = new Audio("sounds/wrong.mp3");
         audio.play();
         $("body").addClass("game-over");
